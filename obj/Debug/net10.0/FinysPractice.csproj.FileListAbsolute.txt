@@ -1,0 +1,14 @@
+/home/dusty/code/practice/CSharpPractice/FinysPractice/bin/Debug/net10.0/FinysPractice
+/home/dusty/code/practice/CSharpPractice/FinysPractice/bin/Debug/net10.0/FinysPractice.deps.json
+/home/dusty/code/practice/CSharpPractice/FinysPractice/bin/Debug/net10.0/FinysPractice.runtimeconfig.json
+/home/dusty/code/practice/CSharpPractice/FinysPractice/bin/Debug/net10.0/FinysPractice.dll
+/home/dusty/code/practice/CSharpPractice/FinysPractice/bin/Debug/net10.0/FinysPractice.pdb
+/home/dusty/code/practice/CSharpPractice/FinysPractice/obj/Debug/net10.0/FinysPractice.GeneratedMSBuildEditorConfig.editorconfig
+/home/dusty/code/practice/CSharpPractice/FinysPractice/obj/Debug/net10.0/FinysPractice.AssemblyInfoInputs.cache
+/home/dusty/code/practice/CSharpPractice/FinysPractice/obj/Debug/net10.0/FinysPractice.AssemblyInfo.cs
+/home/dusty/code/practice/CSharpPractice/FinysPractice/obj/Debug/net10.0/FinysPractice.csproj.CoreCompileInputs.cache
+/home/dusty/code/practice/CSharpPractice/FinysPractice/obj/Debug/net10.0/FinysPractice.dll
+/home/dusty/code/practice/CSharpPractice/FinysPractice/obj/Debug/net10.0/refint/FinysPractice.dll
+/home/dusty/code/practice/CSharpPractice/FinysPractice/obj/Debug/net10.0/FinysPractice.pdb
+/home/dusty/code/practice/CSharpPractice/FinysPractice/obj/Debug/net10.0/FinysPractice.genruntimeconfig.cache
+/home/dusty/code/practice/CSharpPractice/FinysPractice/obj/Debug/net10.0/ref/FinysPractice.dll
