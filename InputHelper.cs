@@ -1,5 +1,4 @@
 namespace FinysPractice.Helpers;
-
 public static class InputHelper
 {
   public static int ReadInt(string prompt)
