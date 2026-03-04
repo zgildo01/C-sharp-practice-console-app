@@ -3,13 +3,13 @@ using FinysPractice.Models;
 using FinysPractice.Services.Interfaces;
 public class PolicyService : IPolicyService
 {
-  private readonly List<Policy> _policies = new List<Policy>();
-  private readonly ICustomerService _customerService;
-  public PolicyService(ICustomerService customerService)
+    private readonly List<Policy> _policies = new List<Policy>();
+    private readonly ICustomerService _customerService;
+    public PolicyService(ICustomerService customerService)
     {
       _customerService = customerService;
     }
-  public bool CreatePolicy (int id, decimal premium, bool active, int customerId)
+    public bool CreatePolicy (int id, decimal premium, bool active, int customerId)
     {
       Customer? customer = _customerService.GetCustomerById(customerId);
 
@@ -46,11 +46,11 @@ public class PolicyService : IPolicyService
       _policies.Add(policy);
       return true;
     }
-  public List<Policy> GetAllPolicies()
+    public List<Policy> GetAllPolicies()
     {
       return _policies;
     }
-  public Policy? GetPolicyById(int id)
+    public Policy? GetPolicyById(int id)
     {
       if(_policies.Count == 0||id <= 0||_policies.FirstOrDefault(p => p.Id == id) == null)
       {
@@ -60,7 +60,7 @@ public class PolicyService : IPolicyService
         return _policies.FirstOrDefault(p => p.Id == id);
       }
     }
-  public bool UpdatePremium(int id, decimal newPremium)
+    public bool UpdatePremium(int id, decimal newPremium)
     {
       var policy = GetPolicyById(id);
       if(policy == null)
@@ -71,7 +71,7 @@ public class PolicyService : IPolicyService
       policy.Premium = newPremium;
       return true;
     }
-  public bool UpdateActiveStatus(int id, bool newStatus)
+    public bool UpdateActiveStatus(int id, bool newStatus)
     {
       var policy = GetPolicyById(id);
       if (policy == null)
@@ -82,7 +82,7 @@ public class PolicyService : IPolicyService
       policy.Active = newStatus;
       return true;
     }
-  public bool UpdateCustomer(int id, Customer newCustomer)
+    public bool UpdateCustomer(int id, Customer newCustomer)
     {
       var policy = GetPolicyById(id);
       if(policy == null)
@@ -93,7 +93,7 @@ public class PolicyService : IPolicyService
       policy.Customer = newCustomer;
       return true;
     }
-  public bool DeletePolicy(int id)
+    public bool DeletePolicy(int id)
     {
       var policy = GetPolicyById(id);
       if(policy == null)
@@ -104,35 +104,35 @@ public class PolicyService : IPolicyService
       _policies.Remove(policy);
       return true;
     }
-  public List<Policy> GetActivePolicies()
+    public List<Policy> GetActivePolicies()
     {
       return _policies
             .Where(p => p.Active)
             .ToList();
     }
-  public List<Policy> GetPoliciesByState(string state)
+    public List<Policy> GetPoliciesByState(string state)
     {
       return _policies
             .Where(p => p.Customer != null && p.Customer.State == state)
             .ToList();
     }
-  public List<Policy> GetPoliciesForOlderCustomers(int age)
-  {
-    return _policies
-          .Where(p => p.Customer != null && p.Customer.Age > age)
-          .ToList();
-  }
-  public decimal GetTotalActivePremium()
-  {
-    return _policies
-          .Where(p => p.Active)
-          .Sum(p => p.Premium);
-  }
-  public Dictionary<string, List<Policy>> GetPoliciesGroupedByState()
-  {
-    return _policies
-          .Where(p => p.Customer != null)
-          .GroupBy(p => p.Customer.State)
-          .ToDictionary(g => g.Key, g => g.ToList());
-  }
+    public List<Policy> GetPoliciesForOlderCustomers(int age)
+    {
+      return _policies
+            .Where(p => p.Customer != null && p.Customer.Age > age)
+            .ToList();
+    }
+    public decimal GetTotalActivePremium()
+    {
+      return _policies
+            .Where(p => p.Active)
+            .Sum(p => p.Premium);
+    }
+    public Dictionary<string, List<Policy>> GetPoliciesGroupedByState()
+    {
+      return _policies
+            .Where(p => p.Customer != null)
+            .GroupBy(p => p.Customer.State)
+            .ToDictionary(g => g.Key, g => g.ToList());
+    }
 }

@@ -16,7 +16,7 @@ public class Program
       PolicyService policyService = new PolicyService(customerService);
 
       CustomerUIService.CreateCustomerUI(customerService);
-      PolicyUIService.CreatePolicyUI(policyService);
+      PolicyUIService.CreatePolicyUI(policyService, customerService);
 
       while(running)
       {

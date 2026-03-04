@@ -4,8 +4,8 @@ using FinysPractice.Services.Interfaces;
 
 public class CustomerService : ICustomerService
 {
-  private readonly List<Customer> _customers = new List<Customer>();
-  public Customer CreateCustomer(int id, string name, int age, string state)
+    private readonly List<Customer> _customers = new List<Customer>();
+    public Customer CreateCustomer(int id, string name, int age, string state)
     {
       var customer = new Customer
       {
@@ -18,7 +18,7 @@ public class CustomerService : ICustomerService
       _customers.Add(customer);
       return customer;
     }
-  public Customer? GetCustomerById(int id)
+    public Customer? GetCustomerById(int id)
     {
       if(_customers.Count == 0||id <= 0||_customers.FirstOrDefault(c => c.Id == id) == null)
       {
@@ -27,7 +27,7 @@ public class CustomerService : ICustomerService
       }
       return _customers.FirstOrDefault(c => c.Id == id);
     }
-  public bool UpdateCustomerState(int id, string newState)
+    public bool UpdateCustomerState(int id, string newState)
     {
       var customer = GetCustomerById(id);
       if(customer == null)
@@ -38,7 +38,7 @@ public class CustomerService : ICustomerService
       customer.State = newState;
       return true;
     }
-  public bool UpdateCustomerAge(int id, int newAge)
+    public bool UpdateCustomerAge(int id, int newAge)
     {
       var customer = GetCustomerById(id);
       if(customer == null)
@@ -49,7 +49,7 @@ public class CustomerService : ICustomerService
       customer.Age = newAge;
       return true;
     }
-  public bool UpdateCustomerName(int id, string newName)
+    public bool UpdateCustomerName(int id, string newName)
     {
       var customer = GetCustomerById(id);
       if(customer == null)
@@ -60,7 +60,7 @@ public class CustomerService : ICustomerService
       customer.Name = newName;
       return true;
     }
-  public bool DeleteCustomer(int id)
+    public bool DeleteCustomer(int id)
     {
       var customer = GetCustomerById(id);
       if(customer == null)
