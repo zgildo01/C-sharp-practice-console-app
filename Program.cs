@@ -1,8 +1,10 @@
 ﻿
 namespace FinysPractice;
-
 using FinysPractice.Models;
 using FinysPractice.Services;
+using FinysPractice.Services.Interfaces;
+using FinysPractice.UI;
+
 public class Program
 {
   public static void Main(string[] args)
@@ -10,8 +12,11 @@ public class Program
       Console.WriteLine("Hello, World!");
       bool running = true;
       
-      var customerService = new CustomerService();
-      var policyService = new PolicyService();
+      ICustomerService customerService = new CustomerService();
+      PolicyService policyService = new PolicyService(customerService);
+
+      CustomerUIService.CreateCustomerUI(customerService);
+      PolicyUIService.CreatePolicyUI(policyService);
 
       while(running)
       {

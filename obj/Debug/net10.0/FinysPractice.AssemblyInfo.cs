@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinysPractice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0455560ed0afc0968fbafb91d647e2c52bde47f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2fe7d3d7c333ca84f31b5c7dcec4cf87648caf3")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinysPractice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinysPractice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
