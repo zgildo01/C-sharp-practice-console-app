@@ -13,7 +13,7 @@ public class Program
       bool running = true;
       
       ICustomerService customerService = new CustomerService();
-      PolicyService policyService = new PolicyService(customerService);
+      IPolicyService policyService = new PolicyService(customerService);
 
       CustomerUIService.CreateCustomerUI(customerService);
       PolicyUIService.CreatePolicyUI(policyService, customerService);
