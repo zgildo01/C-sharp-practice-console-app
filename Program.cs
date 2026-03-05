@@ -41,10 +41,7 @@ public class Program
             PolicyUIService.ShowPolicyMenu(policyService, customerService);
             break;
           case 4:
-            Console.WriteLine("1. Delete A Customer");
-            Console.WriteLine("2. Update A Customer");
-            Console.WriteLine("3. Get Details Of Customer");
-            Console.WriteLine("4. Return");
+
             break;
           case 5:
             running = false;

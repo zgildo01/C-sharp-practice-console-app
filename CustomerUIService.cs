@@ -28,6 +28,31 @@ public static class CustomerUIService
     }
     public static void ShowCustomerMenu(ICustomerService service)
     {
+      bool running = true;
       
+      while (running)
+      {
+        Console.WriteLine("1. Delete A Customer");
+        Console.WriteLine("2. Update A Customer");
+        Console.WriteLine("3. Get Details Of Customer");
+        Console.WriteLine("4. Return");
+        int choice = InputHelper.ReadInt("Choose an option (input number): ");
+
+        switch (choice)
+        {
+          case 1:
+          DeleteCustomerUI(service);
+          break;
+          case 2:
+          UpdateCustomerUI(service);
+          break;
+          case 3:
+          GetCustomerUI(service);
+          break;
+          case 4:
+          running = false;
+          break;
+        }
+      }
     }
 }
