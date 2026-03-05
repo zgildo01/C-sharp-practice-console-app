@@ -14,4 +14,16 @@ public static class CustomerUIService
       service.CreateCustomer(id, name, age, state);
       Console.WriteLine($"Customer {name} created.");
     }
+    public static void GetCustomerUI(ICustomerService service)
+    {
+      
+    }
+    public static void DeleteCustomerUI(ICustomerService service)
+    {
+      
+    }
+    public static void UpdateCustomerUI(ICustomerService service)
+    {
+      
+    }
 }

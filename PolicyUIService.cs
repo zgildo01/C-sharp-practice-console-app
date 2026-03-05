@@ -30,4 +30,16 @@ public static class PolicyUIService
         Console.WriteLine($"Error: {e.Message}");
       }
     }
+    public static void UpdatePolicyUI(IPolicyService policyService, ICustomerService customerService)
+    {
+      
+    }
+    public static void DeletePolicyUI(IPolicyService policyService)
+    {
+      
+    }
+    public static void GetPolicyUI(IPolicyService policyService)
+    {
+      
+    }
 }
