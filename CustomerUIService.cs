@@ -26,4 +26,8 @@ public static class CustomerUIService
     {
       
     }
+    public static void ShowCustomerMenu(ICustomerService service)
+    {
+      
+    }
 }

@@ -42,4 +42,33 @@ public static class PolicyUIService
     {
       
     }
+    public static void ShowPolicyMenu(IPolicyService policyService, ICustomerService customerService)
+    {
+      bool running = true;
+
+      while (running)
+      {
+        Console.WriteLine("1. Delete A Policy");
+        Console.WriteLine("2. Update A Policy");
+        Console.WriteLine("3. Get Details Of Policy");
+        Console.WriteLine("4. Return");
+        int choice = InputHelper.ReadInt("Choose an option (input number)");
+
+        switch (choice)
+        {
+          case 1:
+          DeletePolicyUI(policyService);
+          break;
+          case 2:
+          UpdatePolicyUI(policyService, customerService);
+          break;
+          case 3:
+          GetPolicyUI(policyService);
+          break;
+          case 4:
+          running = false;
+          break;
+        }
+      }
+    }
 }
