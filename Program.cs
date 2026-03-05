@@ -1,5 +1,7 @@
 ﻿
 namespace FinysPractice;
+
+using FinysPractice.Helpers;
 using FinysPractice.Models;
 using FinysPractice.Services;
 using FinysPractice.Services.Interfaces;
@@ -15,7 +17,6 @@ public class Program
       ICustomerService customerService = new CustomerService();
       IPolicyService policyService = new PolicyService(customerService);
 
-      CustomerUIService.CreateCustomerUI(customerService);
       PolicyUIService.CreatePolicyUI(policyService, customerService);
 
       while(running)
@@ -26,10 +27,20 @@ public class Program
         Console.WriteLine("3. Manage Existing Policies");
         Console.WriteLine("4. Manage Existing Customers");
         Console.WriteLine("5. Exit");
-        Console.Write("Choose an option (input number): ");
+        int choice = InputHelper.ReadInt("Choose an option (input number): ");
 
-        string? choice = Console.ReadLine();
-        Console.WriteLine($"This is your choice: {choice}");
+        switch (choice)
+        {
+          case 1:
+            CustomerUIService.CreateCustomerUI(customerService);
+            break;
+          case 2:
+            PolicyUIService.CreatePolicyUI(policyService, customerService);
+            break;
+          case 3:
+            Console.WriteLine("Delete A Policy");
+            break;
+        }
       }
       
   }
